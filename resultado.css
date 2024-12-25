@@ -1,0 +1,213 @@
+/* Animación de cambio de fondo (de izquierda a derecha y vuelta) */
+.bg-pan-right {
+    background: linear-gradient(90deg, #7e9697, #deb5f5);
+    background-size: 200% 100%;
+    -webkit-animation: bg-pan-right 8s infinite alternate;
+            animation: bg-pan-right 8s infinite alternate;
+}
+
+/* Animación para mover el fondo de izquierda a derecha y luego de vuelta */
+@-webkit-keyframes bg-pan-right {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes bg-pan-right {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#titulo-carrera {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Ajustes para la imagen */
+#img-carrera {
+    width: 100%;        /* Asegura que la imagen ocupe todo el ancho disponible */
+    height: auto;       /* Mantiene la proporción de la imagen */
+    max-width: 600px;   /* Limita el tamaño máximo de la imagen */
+    margin-top: 20px;
+}
+
+/* Descripción */
+#descripcion {
+    margin: 20px 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Estilo de las áreas */
+#areas-label {
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#areas {
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    #titulo-carrera {
+        font-size: 1.8em;
+    }
+
+    #img-carrera {
+        max-width: 80%; /* Ajusta la imagen para tablets */
+    }
+
+    #descripcion {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #titulo-carrera {
+        font-size: 1.5em;
+    }
+
+    #img-carrera {
+        max-width: 90%; /* Ajusta la imagen para móviles */
+    }
+
+    #descripcion {
+        font-size: 0.9em;
+    }
+
+    #areas-label {
+        font-size: 1em;
+    }
+}
+
+/* Posicionar el botón a la derecha en la parte inferior */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    z-index: 100; /* Asegura que el botón esté encima de otros elementos */
+}
+
+#whatsapp-button button {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Cambiar el color al pasar el cursor */
+#whatsapp-button button:hover {
+    background-color: #128C7E;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    /* Ajustar tamaño del botón en tabletas */
+    #whatsapp-button button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustar tamaño del botón en móviles */
+    #whatsapp-button button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* Alinear el botón a la izquierda para móviles pequeños */
+    #whatsapp-button {
+        bottom: 10px;
+        left: 10px;
+        right: auto; /* Eliminar la alineación derecha */
+    }
+}
+/* Posicionar el botón a la derecha en la parte inferior */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    z-index: 100; /* Asegura que el botón esté encima de otros elementos */
+}
+
+/* Estilos para el botón */
+#whatsapp-button button {
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Cambiar el color al pasar el cursor */
+#whatsapp-button button:hover {
+    background-color: #128C7E;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    /* Ajustar tamaño del botón en tabletas */
+    #whatsapp-button button {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    /* Asegurarse de que el botón esté en la parte inferior derecha */
+    #whatsapp-button {
+        bottom: 10px; /* Ajusta la distancia desde el fondo */
+        right: 10px; /* Ajusta la distancia a la derecha */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustar tamaño del botón en móviles */
+    #whatsapp-button button {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    /* Asegurarse de que el botón esté en la parte inferior derecha */
+    #whatsapp-button {
+        bottom: 10px; /* Ajusta la distancia desde el fondo */
+        right: 10px; /* Ajusta la distancia a la derecha */
+    }
+}
